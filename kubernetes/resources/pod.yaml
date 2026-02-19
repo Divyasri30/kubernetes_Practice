@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    description: "this pod runs nginx"
+    owner: "dev-team"
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"
+      cpu: "500m"
