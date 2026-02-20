@@ -13,14 +13,14 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
-template:
-  metadata: 
-    labels:
-      app: web
-  spec:
-    containers:
-      - name: my-dep-con 
-        image: longflew/ingress:YELLOWPAGE
-        ports:
-          - containerPort: 80
-    restartPolicy: Always 
+  template:
+    metadata: 
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: my-dep-con 
+          image: longflew/ingress:YELLOWPAGE
+          ports:
+            - containerPort: 80
+      restartPolicy: Always 
